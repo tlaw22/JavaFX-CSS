@@ -14,8 +14,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import static jdk.jpackage.internal.WixAppImageFragmentBuilder.ShortcutsFolder.Desktop;
-
 
 public class HelloController {
       @FXML
@@ -67,7 +65,7 @@ public void initialize(){
 //        } catch(URISyntaxException e) {
 //            e.printStackTrace();
 //        }
-      WebEngine engine = webView.getEngine();
-      engine.load("http://www.javafx.com");
+//      WebEngine engine = webView.getEngine();
+//      engine.load("http://www.javafx.com");
 }
 }

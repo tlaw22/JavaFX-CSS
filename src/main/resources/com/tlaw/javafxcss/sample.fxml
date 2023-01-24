@@ -5,12 +5,19 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.tlaw.javafxcss.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Hyperlink?>
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:id="gridPane"
+          fx:controller="com.tlaw.javafxcss.HelloController" stylesheets="@Styles.css">
+    <Button text="Open..." onAction="#handleClick" id="button_three" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS"/>
+    <Button text="Button Two" id="button_three" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    <Button text="Button Three" id="button_three" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+    <Button text="Button Four" id="button_three" GridPane.rowIndex="0" GridPane.columnIndex="6"/>
+    <Button text="Button Five" fx:id="button4"  GridPane.rowIndex="0" GridPane.columnIndex="8" id="button_three"/>
+    <RadioButton text="Choice 1" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Label fx:id="label" text="JavaFX Effects" GridPane.rowIndex="1" GridPane.columnIndex="1"
+            onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" rotate="90"/>
+    <Hyperlink text="www.java.com" GridPane.rowIndex="3" GridPane.columnIndex="5" onAction="#handleLinkClicked"/>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+</GridPane>
